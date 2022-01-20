@@ -14,7 +14,7 @@ export function HeaderComponent() {
   return (
     <div className="text-center text-white">
       <p className="mobile:py-3 font-bold mobile:text-2xl">SIX TOP MENU</p>
-      <p className="mobile:px-2 mobile:text-justify mobile:font-medium">
+      <p className="mobile:px-2 mobile:text-justify mobile:font-medium tablet:text-center">
         These are the 6 best menus in our restaurant, we highly recommend you to
         order this menu.
       </p>
@@ -76,11 +76,11 @@ export function FoodsComponent() {
   });
   return (
     <div className="py-2 mobile:px-2">
-      <div className="grid mobile:grid-cols-1 mobile:gap-2">
+      <div className="grid mobile:grid-cols-1 mobile:gap-2 tablet:grid-cols-2 laptop:grid-cols-3 laptop:gap-6">
         {data.menu.map((items) => {
           return (
             <div
-              className="mobile:w-full mobile:h-72 flex flex-col"
+              className="mobile:w-full mobile:h-72 flex flex-col hover:cursor-pointer"
               key={items.id}
             >
               <div
@@ -109,7 +109,16 @@ export function FoodsComponent() {
 export function FooterComponent() {
   return (
     <div className=" bg-neutral-800">
-      <p className="text-center py-7 text-white">created by aristrisnawan</p>
+      <p className="text-center py-7 text-white">
+        created by{" "}
+        <a
+          href="https://github.com/aristrisnawan"
+          className="cursor-pointer"
+          target="_blank"
+        >
+          aristrisnawan
+        </a>
+      </p>
     </div>
   );
 }
